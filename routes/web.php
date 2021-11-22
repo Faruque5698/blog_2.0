@@ -33,6 +33,8 @@ Route::get('about',[HomeController::class,'about']);
 Route::get('post',[HomeController::class,'post']);
 Route::get('contact',[HomeController::class,'contact']);
 
+Route::get('post_details/{id}',[HomeController::class,'post_details'])->name('post_details');
+
 Route::prefix('user')->group(function (){
     Route::get('dashboard',[UserController::class,'dashboard']);
     Route::get('comments',[UserController::class,'comments']);
